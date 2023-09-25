@@ -51,12 +51,15 @@ export default function IndexPage() {
       </PageHeader>
       <Separator />
       <div className="p-4">
-        High performance full stack software developer, mathematician &
-        musician. Expert in scalable development with serverless architecture,
-        geolocation & mapping tools, complex systems engineering & data
-        modeling. Developed 16 mobile apps, websites, SaaS tools & video games
-        with his brother Daniel. Co-authored internal paper used by Oak Ridge
-        National Laboratory to understand e-learning via UI/UX.
+        I'm a full-stack engineer that has spent a lot of time coding in Swift,
+        JavaScript, TypeScript, and SQL. I've made iOS apps, cross-platform apps
+        with React Native, and websites using pure ReactJS and, more recently,
+        NextJS. I've made REST APIs as well as GraphQL APIs, both using Express
+        as the framework. I have designed PostgreSQL and MySQL databases. I'm
+        self-motivated. I've usually worked as a sole-developer or as product
+        lead in a small engineering team, so I'm used to solving any problems
+        that arise. I also enjoy the process of diving into areas that I am
+        unfamiliar with. I look forward to connecting!
       </div>
     </main>
   );
