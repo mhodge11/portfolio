@@ -22,31 +22,33 @@ export interface FormTextareaProps
   description?: string;
 }
 
-export const FormTextarea = ({
+export function FormTextarea({
   name,
   control,
   label,
   placeholder,
   description,
-}: FormTextareaProps) => (
-  <FormField
-    control={control}
-    name={name}
-    render={({ field }) => (
-      <FormItem>
-        {label && <FormLabel>{label}</FormLabel>}
+}: FormTextareaProps) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem>
+          {label && <FormLabel>{label}</FormLabel>}
 
-        <FormControl>
-          <Textarea
-            placeholder={placeholder ?? `Enter ${name}...`}
-            {...field}
-          />
-        </FormControl>
+          <FormControl>
+            <Textarea
+              placeholder={placeholder ?? `Enter ${name}...`}
+              {...field}
+            />
+          </FormControl>
 
-        {description && <FormDescription>{description}</FormDescription>}
+          {description && <FormDescription>{description}</FormDescription>}
 
-        <FormMessage />
-      </FormItem>
-    )}
-  />
-);
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+}

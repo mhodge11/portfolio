@@ -1,8 +1,8 @@
 "use client";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { api } from "@/lib/api";
 import { baseUrl } from "@/lib/utils";
-import { api } from "@/utils/api";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
@@ -10,9 +10,10 @@ import { type ThemeProviderProps } from "next-themes/dist/types";
 import { useState } from "react";
 import superjson from "superjson";
 
-export const ThemeProvider: React.FC<
-  { children: React.ReactNode } & ThemeProviderProps
-> = ({ children, ...props }) => (
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  children,
+  ...props
+}) => (
   <NextThemesProvider {...props}>
     <TooltipProvider>{children}</TooltipProvider>
   </NextThemesProvider>

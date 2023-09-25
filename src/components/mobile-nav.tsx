@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { docsConfig } from "@/config/docs";
+import { navConfig } from "@/config/nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ViewVerticalIcon } from "@radix-ui/react-icons";
@@ -12,7 +12,7 @@ import Link, { type LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import * as React from "react";
 
-export const MobileNav = () => {
+export function MobileNav() {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -37,7 +37,7 @@ export const MobileNav = () => {
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            {docsConfig.mainNav?.map(
+            {navConfig.mainNav?.map(
               (item) =>
                 item.href && (
                   <MobileLink
@@ -51,7 +51,7 @@ export const MobileNav = () => {
             )}
           </div>
           <div className="flex flex-col space-y-2">
-            {docsConfig.sidebarNav.map((item, index) => (
+            {navConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
@@ -78,7 +78,7 @@ export const MobileNav = () => {
       </SheetContent>
     </Sheet>
   );
-};
+}
 
 interface MobileLinkProps extends LinkProps {
   onOpenChange?: (open: boolean) => void;

@@ -3,10 +3,13 @@ import { type FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-const createInnerTRPCContext = () => ({});
+function createInnerTRPCContext() {
+  return {};
+}
 
-export const createTRPCContext = (_opts: FetchCreateContextFnOptions) =>
-  createInnerTRPCContext();
+export function createTRPCContext(_opts: FetchCreateContextFnOptions) {
+  return createInnerTRPCContext();
+}
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,

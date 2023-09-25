@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const MainNav = () => {
+export function MainNav() {
   const pathname = usePathname();
 
   return (
@@ -59,4 +59,4 @@ export const MainNav = () => {
       </nav>
     </div>
   );
-};
+}

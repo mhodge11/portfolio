@@ -5,7 +5,7 @@ interface DocsConfig {
   sidebarNav: NavItemWithChildren[];
 }
 
-export const docsConfig: DocsConfig = {
+export const navConfig: DocsConfig = {
   mainNav: [
     {
       title: "Projects",

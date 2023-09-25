@@ -7,7 +7,7 @@ import { Info } from "lucide-react";
 import { titleCase } from "moderndash";
 import { useFormContext } from "react-hook-form";
 
-export const FormErrors = () => {
+export function FormErrors() {
   const { formState } = useFormContext();
 
   if (Object.keys(formState.errors).length > 0) {
@@ -32,4 +32,4 @@ export const FormErrors = () => {
   }
 
   return null;
-};
+}

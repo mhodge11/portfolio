@@ -24,7 +24,7 @@ export interface FormInputProps
   labelClassName?: string;
 }
 
-export const FormInput = ({
+export function FormInput({
   name,
   control,
   label,
@@ -32,26 +32,30 @@ export const FormInput = ({
   description,
   labelClassName,
   ...props
-}: FormInputProps) => (
-  <FormField
-    control={control}
-    name={name}
-    render={({ field }) => (
-      <FormItem className="w-full">
-        {label && <FormLabel className={cn(labelClassName)}>{label}</FormLabel>}
+}: FormInputProps) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem className="w-full">
+          {label && (
+            <FormLabel className={cn(labelClassName)}>{label}</FormLabel>
+          )}
 
-        <FormControl>
-          <Input
-            placeholder={placeholder ?? `Enter ${name}...`}
-            {...props}
-            {...field}
-          />
-        </FormControl>
+          <FormControl>
+            <Input
+              placeholder={placeholder ?? `Enter ${name}...`}
+              {...props}
+              {...field}
+            />
+          </FormControl>
 
-        {description && <FormDescription>{description}</FormDescription>}
+          {description && <FormDescription>{description}</FormDescription>}
 
-        <FormMessage />
-      </FormItem>
-    )}
-  />
-);
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+}

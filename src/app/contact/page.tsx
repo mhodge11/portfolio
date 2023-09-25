@@ -12,8 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
+import { api } from "@/lib/api";
 import { contactSchema, type ContactSchema } from "@/types/contact";
-import { api } from "@/utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
 
             <FormErrors />
 
-            <div className="pt-4 flex items-center justify-end">
+            <div className="flex items-center justify-end pt-4">
               <Button type="submit">Send Message</Button>
             </div>
           </form>

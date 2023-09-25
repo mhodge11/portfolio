@@ -10,7 +10,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { docsConfig } from "@/config/docs";
+import { navConfig } from "@/config/nav";
 import { cn } from "@/lib/utils";
 import { type DialogProps } from "@radix-ui/react-alert-dialog";
 import {
@@ -67,7 +67,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {docsConfig.mainNav
+            {navConfig.mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -82,7 +82,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
+          {navConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem

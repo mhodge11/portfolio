@@ -25,58 +25,64 @@ interface ResumeEducationSectionProps {
   children: React.ReactNode;
 }
 
-export const ResumeTitleSection = ({ children }: ResumeTitleSectionProps) => (
-  <div className="px-4 pt-8 text-2xl font-bold">{children}</div>
-);
+export function ResumeTitleSection({ children }: ResumeTitleSectionProps) {
+  return <div className="px-4 pt-8 text-2xl font-bold">{children}</div>;
+}
 
-export const ResumeSummarySection = ({
-  children,
-}: ResumeSummarySectionProps) => <div className="px-4 py-8">{children}</div>;
+export function ResumeSummarySection({ children }: ResumeSummarySectionProps) {
+  return <div className="px-4 py-8">{children}</div>;
+}
 
-export const ResumeWorkSection = ({
+export function ResumeWorkSection({
   title,
   position,
   startDate,
   endDate,
   children,
-}: ResumeWorkSectionProps) => (
-  <div className="flex flex-col px-4 pt-8">
-    <div className="flex flex-col">
-      <h4 className="font-bold">{title}</h4>
-      <div className="text-muted-foreground">
-        {position} • {startDate} - {endDate}
+}: ResumeWorkSectionProps) {
+  return (
+    <div className="flex flex-col px-4 pt-8">
+      <div className="flex flex-col">
+        <h4 className="font-bold">{title}</h4>
+        <div className="text-muted-foreground">
+          {position} • {startDate} - {endDate}
+        </div>
       </div>
+      <div className="flex pt-2">{children}</div>
     </div>
-    <div className="flex pt-2">{children}</div>
-  </div>
-);
+  );
+}
 
-export const ResumeSkillsSection = ({ skills }: ResumeSkillsSectionProps) => (
-  <div className="flex flex-wrap gap-4 px-4 py-8">
-    {skills.map((skill) => (
-      <div
-        key={skill}
-        className="rounded-full border border-foreground px-4 py-2"
-      >
-        {skill}
-      </div>
-    ))}
-  </div>
-);
+export function ResumeSkillsSection({ skills }: ResumeSkillsSectionProps) {
+  return (
+    <div className="flex flex-wrap gap-4 px-4 py-8">
+      {skills.map((skill) => (
+        <div
+          key={skill}
+          className="rounded-full border border-foreground px-4 py-2"
+        >
+          {skill}
+        </div>
+      ))}
+    </div>
+  );
+}
 
-export const ResumeEducationSection = ({
+export function ResumeEducationSection({
   title,
   startDate,
   endDate,
   children,
-}: ResumeEducationSectionProps) => (
-  <div className="flex flex-col px-4 py-8">
-    <div className="flex flex-col">
-      <h4 className="font-bold">{title}</h4>
-      <div className="text-muted-foreground">
-        {startDate} - {endDate}
+}: ResumeEducationSectionProps) {
+  return (
+    <div className="flex flex-col px-4 py-8">
+      <div className="flex flex-col">
+        <h4 className="font-bold">{title}</h4>
+        <div className="text-muted-foreground">
+          {startDate} - {endDate}
+        </div>
       </div>
+      <div className="flex pt-2">{children}</div>
     </div>
-    <div className="flex pt-2">{children}</div>
-  </div>
-);
+  );
+}

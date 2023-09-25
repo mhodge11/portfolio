@@ -15,4 +15,6 @@ const configAtom = atomWithStorage<Config>("config", {
   radius: 0.5,
 });
 
-export const useConfig = () => useAtom(configAtom);
+export function useConfig() {
+  return useAtom(configAtom);
+}
