@@ -52,16 +52,16 @@ export default function IndexPage() {
       </PageHeader>
       <Separator />
       <div className="px-4 py-8">
-        Hi, I'm Micah! I'm a full-stack engineer that has spent a lot of time
-        coding in Swift, JavaScript, TypeScript, and SQL. I've made iOS apps,
-        cross-platform apps with React Native, and websites using pure ReactJS
-        and, more recently, NextJS. I've made REST APIs as well as GraphQL APIs,
-        both using Express as the framework. I have designed PostgreSQL and
-        MySQL databases. I'm self-motivated. I've usually worked as a
-        sole-developer or as product lead in a small engineering team, so I'm
-        used to solving any problems that arise. I also enjoy the process of
-        diving into areas that I am unfamiliar with. If you'd like to reach out,
-        head over to the{" "}
+        Hi, I'm Micah! I'm a full-stack engineer that has spent over 7 years
+        programming in Swift, JavaScript, TypeScript, and SQL, in multiple
+        different frameworks. I've made iOS apps, cross-platform apps with React
+        Native, and websites using pure React and, more recently, Next.js. I've
+        made RESTful APIs as well as GraphQL APIs, using Express.js as the
+        framework. I have designed PostgreSQL and MySQL databases. I'm extremely
+        self-motivated. I've usually worked as a solo developer, or as product
+        lead in a small engineering team, so I'm used to solving any problems
+        that arise. I also enjoy the process of diving into areas that I am
+        unfamiliar with. If you'd like to reach out, head over to the{" "}
         {
           <Link
             className="font-medium underline underline-offset-4"
@@ -70,7 +70,8 @@ export default function IndexPage() {
             Contact Page
           </Link>
         }{" "}
-        and send me a message. I look forward to connecting!
+        and send me a message. I look forward to hearing what we can build
+        together!
       </div>
     </main>
   );
