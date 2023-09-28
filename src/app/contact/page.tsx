@@ -2,13 +2,13 @@
 
 import { FormErrors } from "@/components/form-errors";
 import { FormInput } from "@/components/form-input";
+import { FormSubmit } from "@/components/form-submit";
 import { FormTextarea } from "@/components/form-textarea";
 import {
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header";
-import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
@@ -87,7 +87,7 @@ export default function ContactPage() {
             <FormErrors />
 
             <div className="flex items-center justify-end pt-4">
-              <Button type="submit">Send Message</Button>
+              <FormSubmit>Send Message</FormSubmit>
             </div>
           </form>
         </Form>

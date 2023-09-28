@@ -1,28 +1,39 @@
 import { type NavItem, type NavItemWithChildren } from "@/types/nav";
 
-interface DocsConfig {
-  mainNav: NavItem[];
-  sidebarNav: NavItemWithChildren[];
+
+interface NavConfig {
+  main: NavItem[];
+  other: NavItemWithChildren[];
 }
 
-export const navConfig: DocsConfig = {
-  mainNav: [
-    {
-      title: "Projects",
-      href: "/projects",
-    },
+export const navConfig: NavConfig = {
+  main: [
     {
       title: "Resume",
       href: "/resume",
     },
     {
-      title: "Dependencies",
-      href: "/dependencies",
-    },
-    {
       title: "Contact",
       href: "/contact",
     },
+    {
+      title: "Dependencies",
+      href: "/dependencies",
+    },
   ],
-  sidebarNav: [],
+  other: [
+    {
+      title: "Coming Soon",
+      items: [
+        {
+          title: "Projects",
+          href: "/projects",
+        },
+        {
+          title: "Examples",
+          href: "/examples",
+        },
+      ],
+    },
+  ],
 };

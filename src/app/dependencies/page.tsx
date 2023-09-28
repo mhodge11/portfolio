@@ -13,7 +13,8 @@ export default function DependenciesPage() {
       <PageHeader className="pb-8">
         <PageHeaderHeading>Dependencies</PageHeaderHeading>
         <PageHeaderDescription>
-          All open source projects used in this portfolio.
+          All open source projects used in this portfolio. Thank you to all the
+          developers who make projects like these possible!
         </PageHeaderDescription>
       </PageHeader>
       <Separator />

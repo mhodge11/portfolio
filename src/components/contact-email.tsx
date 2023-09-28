@@ -11,7 +11,7 @@ import {
   Text,
 } from "@react-email/components";
 
-export const Email: React.FC<Readonly<ContactSchema>> = ({
+export const ContactEmail: React.FC<Readonly<ContactSchema>> = ({
   name,
   email,
   message,

@@ -4,7 +4,6 @@ import { ThemeProvider, TrpcProvider } from "@/components/providers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
@@ -33,11 +32,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "mhodge11",
-      url: "https://micahhodge.com",
+      name: "micahhodge",
+      url: "https://micahhodge.me",
     },
   ],
-  creator: "mhodge11",
+  creator: "micahhodge",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -102,7 +101,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
               <TailwindIndicator />
             </ThemeProvider>
-            <ThemeSwitcher />
             <Analytics />
             <Toaster />
           </TrpcProvider>

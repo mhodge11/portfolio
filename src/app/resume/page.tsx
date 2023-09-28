@@ -81,6 +81,7 @@ export default function ResumePage() {
           "React",
           "React Native",
           "Next.js",
+          "HTML",
           "CSS",
           "iOS",
           "Swift",

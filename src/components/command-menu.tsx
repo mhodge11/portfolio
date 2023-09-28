@@ -51,7 +51,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64",
+          "relative w-full justify-start text-sm text-muted-foreground sm:pr-12 lg:w-64",
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -67,7 +67,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {navConfig.mainNav
+            {navConfig.main
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -82,7 +82,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {navConfig.sidebarNav.map((group) => (
+          {navConfig.other.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem

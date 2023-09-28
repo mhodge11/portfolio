@@ -1,5 +1,6 @@
 "use client";
 
+import { ComingSoonDropdown } from "@/components/coming-soon-dropdown";
 import { Icons } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -10,7 +11,7 @@ export function MainNav() {
   const pathname = usePathname();
 
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden lg:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.logo className="h-6 w-6" />
         <span className="hidden font-bold sm:inline-block">
@@ -18,15 +19,6 @@ export function MainNav() {
         </span>
       </Link>
       <nav className="flex items-center space-x-6 text-sm font-medium">
-        <Link
-          href="/projects"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/projects" ? "text-foreground" : "text-foreground/60",
-          )}
-        >
-          Projects
-        </Link>
         <Link
           href="/resume"
           className={cn(
@@ -56,7 +48,26 @@ export function MainNav() {
         >
           Dependencies
         </Link>
+        {/* <Link
+          href="/projects"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === "/projects" ? "text-foreground" : "text-foreground/60",
+          )}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === "/examples" ? "text-foreground" : "text-foreground/60",
+          )}
+        >
+          Examples
+        </Link> */}
       </nav>
+      <ComingSoonDropdown />
     </div>
   );
 }

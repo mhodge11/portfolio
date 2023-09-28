@@ -16,7 +16,7 @@ export function SiteFooter() {
           </a>
           . The source code is available on{" "}
           <a
-            href={siteConfig.links.github}
+            href={siteConfig.links.githubProject}
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

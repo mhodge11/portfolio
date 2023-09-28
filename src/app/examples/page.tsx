@@ -6,15 +6,14 @@ import {
 } from "@/components/page-header";
 import { Separator } from "@/components/ui/separator";
 
-export default function ProjectsPage() {
+export default function ExamplesPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Projects</PageHeaderHeading>
+        <PageHeaderHeading>Examples</PageHeaderHeading>
         <PageHeaderDescription>
-          Projects I've worked on. All open source projects are linked to their
-          GitHub repositories. All private projects are linked to their
-          respective websites.
+          Examples of UI/UX components I've built. These include interactive
+          maps, calendars, and more.
         </PageHeaderDescription>
       </PageHeader>
       <Separator />

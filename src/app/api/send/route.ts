@@ -1,4 +1,4 @@
-import { Email } from "@/components/email";
+import { ContactEmail } from "@/components/contact-email";
 import { env } from "@/env.mjs";
 import { type ContactSchema } from "@/types/contact";
 import { NextResponse } from "next/server";
@@ -11,10 +11,10 @@ export const POST = async (req: Request) => {
     const { name, email, message } = (await req.json()) as ContactSchema;
 
     const data = await resend.emails.send({
-      from: "Portfolio Contact Form <no-reply@micahhodgeportfolio.com>",
+      from: "Portfolio Contact Form <contact@resend.dev>",
       to: env.CONTACT_EMAIL,
-      subject: `Portfolio Contact Form: ${name}`,
-      react: Email({ name, email, message }),
+      subject: `You've been contacted by: ${name}`,
+      react: ContactEmail({ name, email, message }),
       text: `New message from ${name} (${email}):\n\n${message}`,
     });
 
