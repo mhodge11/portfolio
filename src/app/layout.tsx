@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "micahhodge",
-      url: "https://micahhodge.me",
+      url: siteConfig.url,
     },
   ],
   creator: "micahhodge",
