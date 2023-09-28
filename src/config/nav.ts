@@ -1,6 +1,5 @@
 import { type NavItem, type NavItemWithChildren } from "@/types/nav";
 
-
 interface NavConfig {
   main: NavItem[];
   other: NavItemWithChildren[];
