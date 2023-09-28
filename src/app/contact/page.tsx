@@ -87,7 +87,7 @@ export default function ContactPage() {
             <FormErrors />
 
             <div className="flex items-center justify-end pt-4">
-              <FormSubmit>Send Message</FormSubmit>
+              <FormSubmit className="w-full sm:w-auto">Send Message</FormSubmit>
             </div>
           </form>
         </Form>
