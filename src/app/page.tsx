@@ -14,10 +14,11 @@ export default function IndexPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Software Engineering Portfolio.</PageHeaderHeading>
+        <PageHeaderHeading>Full-Stack Software Engineering.</PageHeaderHeading>
         <PageHeaderDescription>
           TypeScript, JavaScript, React, React Native, Next.js, Tailwind CSS,
-          iOS, Swift, Express.js, AWS, GraphQL, SQL and more.
+          HTML, CSS, iOS, Swift, Express.js, Node.js, AWS, GraphQL, SQL and
+          more.
         </PageHeaderDescription>
         <div className="flex w-full flex-wrap items-center gap-4 pt-4">
           <Link

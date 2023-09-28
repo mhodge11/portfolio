@@ -23,13 +23,18 @@ export const metadata: Metadata = {
     "React",
     "React Native",
     "Next.js",
+    "Tailwind CSS",
+    "HTML",
     "CSS",
     "iOS",
     "Swift",
     "Express.js",
+    "Node.js",
     "AWS",
     "GraphQL",
     "SQL",
+    "Full Stack Engineer",
+    "Software Engineering",
   ],
   authors: [
     {
