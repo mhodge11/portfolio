@@ -11,7 +11,7 @@ export const POST = async (req: Request) => {
     const { name, email, message } = (await req.json()) as ContactSchema;
 
     const data = await resend.emails.send({
-      from: "Portfolio Contact Form <contact@resend.dev>",
+      from: "Portfolio Contact Form <contact@micahhodge.me>",
       to: env.CONTACT_EMAIL,
       subject: `You've been contacted by: ${name}`,
       react: ContactEmail({ name, email, message }),
