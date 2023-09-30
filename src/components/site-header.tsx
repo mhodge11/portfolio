@@ -4,6 +4,11 @@ import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -24,51 +29,72 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.gitHub className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </div>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div
+                    className={cn(
+                      buttonVariants({
+                        variant: "ghost",
+                      }),
+                      "w-9 px-0",
+                    )}
+                  >
+                    <Icons.gitHub className="h-4 w-4" />
+                    <span className="sr-only">GitHub</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View my GitHub</p>
+                </TooltipContent>
+              </Tooltip>
             </Link>
             <Link
               href={siteConfig.links.linkedin}
               target="_blank"
               rel="noreferrer"
             >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.linkedIn className="h-4 w-4" />
-                <span className="sr-only">LinkedIn</span>
-              </div>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div
+                    className={cn(
+                      buttonVariants({
+                        variant: "ghost",
+                      }),
+                      "w-9 px-0",
+                    )}
+                  >
+                    <Icons.linkedIn className="h-4 w-4" />
+                    <span className="sr-only">LinkedIn</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View my LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
             </Link>
             <Link
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"
             >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0",
-                )}
-              >
-                <Icons.twitter className="h-4 w-4 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div
+                    className={cn(
+                      buttonVariants({
+                        variant: "ghost",
+                      }),
+                      "w-9 px-0",
+                    )}
+                  >
+                    <Icons.twitter className="h-4 w-4 fill-current" />
+                    <span className="sr-only">Twitter</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View my Twitter</p>
+                </TooltipContent>
+              </Tooltip>
             </Link>
             <ThemeToggle />
           </nav>

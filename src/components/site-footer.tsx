@@ -1,4 +1,10 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -6,23 +12,39 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
-          <a
+          <Link
             href={siteConfig.links.twitter}
             target="_blank"
             rel="noreferrer"
-            className="font-medium underline underline-offset-4"
           >
-            Micah Hodge
-          </a>
+            <Tooltip>
+              <TooltipTrigger>
+                <div className="font-medium underline underline-offset-4">
+                  Micah Hodge
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>View my Twitter</p>
+              </TooltipContent>
+            </Tooltip>
+          </Link>
           . The source code is available on{" "}
-          <a
+          <Link
             href={siteConfig.links.githubProject}
             target="_blank"
             rel="noreferrer"
-            className="font-medium underline underline-offset-4"
           >
-            GitHub
-          </a>
+            <Tooltip>
+              <TooltipTrigger>
+                <div className="font-medium underline underline-offset-4">
+                  GitHub
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>View this project on GitHub</p>
+              </TooltipContent>
+            </Tooltip>
+          </Link>
           .
         </p>
       </div>
