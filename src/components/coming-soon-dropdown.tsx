@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,10 +27,10 @@ export function ComingSoonDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
+        <div
           className={cn(
-            "ml-2 transition-colors hover:text-foreground/80",
+            buttonVariants({ variant: "ghost" }),
+            "ml-2 cursor-pointer transition-colors hover:text-foreground/80",
             comingSoonNav?.items.find((navItem) => pathname === navItem.href)
               ? "text-foreground"
               : "text-foreground/60",
@@ -38,7 +38,7 @@ export function ComingSoonDropdown() {
         >
           Coming Soon
           <span className="sr-only">Coming soon</span>
-        </Button>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {comingSoonNav?.items.map((navItem) => (

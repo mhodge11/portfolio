@@ -1,4 +1,4 @@
-import { ComingSoon } from "@/components/coming-soon";
+import { ComingSoonCard } from "@/components/coming-soon-card";
 import {
   PageHeader,
   PageHeaderDescription,
@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Projects</PageHeaderHeading>
+        <PageHeaderHeading>Projects.</PageHeaderHeading>
         <PageHeaderDescription>
           Projects I've worked on. All open source projects are linked to their
           GitHub repositories. All private projects are linked to their
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         </PageHeaderDescription>
       </PageHeader>
       <Separator />
-      <ComingSoon className="px-4 py-8" />
+      <ComingSoonCard className="px-4 py-8" />
     </main>
   );
 }

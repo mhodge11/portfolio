@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { RocketIcon } from "@radix-ui/react-icons";
 import { Slot } from "@radix-ui/react-slot";
 
-export function ComingSoon({ className }: { className?: string }) {
+export function ComingSoonCard({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center justify-center", className)}>
       <Card>

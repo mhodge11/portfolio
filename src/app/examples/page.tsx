@@ -1,4 +1,4 @@
-import { ComingSoon } from "@/components/coming-soon";
+import { ComingSoonCard } from "@/components/coming-soon-card";
 import {
   PageHeader,
   PageHeaderDescription,
@@ -10,14 +10,14 @@ export default function ExamplesPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Examples</PageHeaderHeading>
+        <PageHeaderHeading>Examples.</PageHeaderHeading>
         <PageHeaderDescription>
           Examples of UI/UX components I've built. These include interactive
           maps, calendars, and more.
         </PageHeaderDescription>
       </PageHeader>
       <Separator />
-      <ComingSoon className="px-4 py-8" />
+      <ComingSoonCard className="px-4 py-8" />
     </main>
   );
 }
