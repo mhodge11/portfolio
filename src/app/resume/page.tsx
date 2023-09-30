@@ -16,7 +16,7 @@ export default function ResumePage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Resume</PageHeaderHeading>
+        <PageHeaderHeading>Resume.</PageHeaderHeading>
         <PageHeaderDescription>
           Work experience, skills, and past education.
         </PageHeaderDescription>

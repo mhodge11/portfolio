@@ -48,24 +48,6 @@ export function MainNav() {
         >
           Dependencies
         </Link>
-        {/* <Link
-          href="/projects"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/projects" ? "text-foreground" : "text-foreground/60",
-          )}
-        >
-          Projects
-        </Link>
-        <Link
-          href="/examples"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/examples" ? "text-foreground" : "text-foreground/60",
-          )}
-        >
-          Examples
-        </Link> */}
       </nav>
       <ComingSoonDropdown />
     </div>

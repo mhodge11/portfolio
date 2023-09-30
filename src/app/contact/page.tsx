@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Contact Me</PageHeaderHeading>
+        <PageHeaderHeading>Contact Me.</PageHeaderHeading>
         <PageHeaderDescription>
           Reach out to schedule a meeting, ask a question, or just to say hi!
         </PageHeaderDescription>
