@@ -13,6 +13,7 @@ import { Form } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
 import { api } from "@/lib/api";
+import { trackEvent } from "@/lib/events";
 import { contactSchema, type ContactSchema } from "@/types/contact";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -34,10 +35,19 @@ export default function ContactPage() {
   });
 
   const sendMessage = api.contact.sendMessage.useMutation({
-    onSuccess: () => {
+    onSuccess: (data, variables) => {
       form.reset();
+
       toast({
         description: "Message sent successfully!",
+      });
+
+      trackEvent({
+        name: "send_message",
+        properties: {
+          ...variables,
+          data,
+        },
       });
     },
     onError: (e) => {
