@@ -10,5 +10,11 @@ export interface NavItem {
 }
 
 export interface NavItemWithChildren extends NavItem {
-  items: NavItem[];
+  items: NavItemWithChildren[];
 }
+
+export type MainNavItem = NavItem;
+
+export type OtherNavItem = NavItemWithChildren;
+
+export type SidebarNavItem = NavItemWithChildren;
