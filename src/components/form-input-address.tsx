@@ -10,18 +10,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { env } from "@/env.mjs";
 import { cn } from "@/lib/utils";
-import { type AddressAutofillProps } from "@mapbox/search-js-react/dist/components/AddressAutofill";
-import dynamic from "next/dynamic";
+import {
+  AddressAutofill,
+  type AddressAutofillProps,
+} from "@mapbox/search-js-react/dist/components/AddressAutofill";
 import { useFormContext } from "react-hook-form";
-
-const AddressAutofill = dynamic(
-  // @ts-expect-error this code works but MapBox apparently has a type issue
-  () =>
-    import("@mapbox/search-js-react").then((module) => module.AddressAutofill), // prettier-ignore-line
-  {
-    ssr: false,
-  },
-);
 
 export interface FormInputAddressProps extends FormInputProps {
   geoName: string;
@@ -63,6 +56,7 @@ export function FormInputAddress({
             <FormLabel className={cn(labelClassName)}>{label}</FormLabel>
           )}
           <FormControl className="w-full">
+            {/* @ts-expect-error code works but for some reason react doesn't like it */}
             <AddressAutofill
               accessToken={env.NEXT_PUBLIC_MAPBOX_TOKEN}
               onRetrieve={handleOnRetrieveAddress}
