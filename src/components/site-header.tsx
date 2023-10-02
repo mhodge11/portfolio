@@ -72,11 +72,7 @@ export function SiteHeader() {
                 </TooltipContent>
               </Tooltip>
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link href={siteConfig.links.x} target="_blank" rel="noreferrer">
               <Tooltip>
                 <TooltipTrigger>
                   <div
@@ -87,12 +83,12 @@ export function SiteHeader() {
                       "w-9 px-0",
                     )}
                   >
-                    <Icons.twitter className="h-4 w-4 fill-current" />
-                    <span className="sr-only">Twitter</span>
+                    <Icons.x className="h-4 w-4 fill-current" />
+                    <span className="sr-only">X</span>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>View my Twitter</p>
+                  <p>View my X account</p>
                 </TooltipContent>
               </Tooltip>
             </Link>
