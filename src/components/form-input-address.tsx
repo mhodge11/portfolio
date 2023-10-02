@@ -10,10 +10,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { env } from "@/env.mjs";
 import { cn } from "@/lib/utils";
-import {
-  AddressAutofill,
-  type AddressAutofillProps,
-} from "@mapbox/search-js-react/dist/components/AddressAutofill";
+import { AddressAutofill } from "@mapbox/search-js-react";
+import { type AddressAutofillProps } from "@mapbox/search-js-react/dist/components/AddressAutofill";
 import { useFormContext } from "react-hook-form";
 
 export interface FormInputAddressProps extends FormInputProps {
@@ -56,7 +54,8 @@ export function FormInputAddress({
             <FormLabel className={cn(labelClassName)}>{label}</FormLabel>
           )}
           <FormControl className="w-full">
-            {/* @ts-expect-error code works but for some reason react doesn't like it */}
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/* @ts-ignore */}
             <AddressAutofill
               accessToken={env.NEXT_PUBLIC_MAPBOX_TOKEN}
               onRetrieve={handleOnRetrieveAddress}
