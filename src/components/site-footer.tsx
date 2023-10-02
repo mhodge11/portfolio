@@ -13,7 +13,7 @@ export function SiteFooter() {
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
           <Link
-            href={siteConfig.links.twitter}
+            href={siteConfig.links.x}
             target="_blank"
             rel="noreferrer"
           >
@@ -24,7 +24,7 @@ export function SiteFooter() {
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-                <p>View my Twitter</p>
+                <p>View my X account</p>
               </TooltipContent>
             </Tooltip>
           </Link>

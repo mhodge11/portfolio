@@ -42,11 +42,11 @@ export default function IndexPage() {
           <Link
             target="_blank"
             rel="noreferrer"
-            href={siteConfig.links.twitter}
+            href={siteConfig.links.x}
             className={cn(buttonVariants({ variant: "outline" }))}
           >
-            <Icons.twitter className="mr-2 h-4 w-4 fill-current" />
-            Twitter
+            <Icons.x className="mr-2 h-4 w-4 fill-current" />X (formerly
+            Twitter)
           </Link>
         </div>
       </PageHeader>
