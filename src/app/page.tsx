@@ -59,8 +59,10 @@ export default function IndexPage() {
         applications using React Native, as well as web applications utilizing
         React and the more recent Next.js. I am proficient in creating both
         RESTful and GraphQL APIs, often employing Express.js as the foundational
-        framework. My database design skills extend to PostgreSQL and MySQL
-        systems. I possess extensive experience in navigating and utilizing the
+        framework. My competencies in database architecture include but are not
+        limited to, expertise in relational databases like PostgreSQL and MySQL,
+        along with proficiency in NoSQL databases such as DynamoDB and MongoDB.
+        I also have an extensive track record in effectively leveraging the
         Amazon Web Services (AWS) ecosystem. With a strong propensity for
         self-motivation, I have predominantly functioned as either an
         independent contributor or as a product lead within compact engineering
