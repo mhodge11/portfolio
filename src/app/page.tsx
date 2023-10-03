@@ -51,27 +51,32 @@ export default function IndexPage() {
         </div>
       </PageHeader>
       <Separator />
-      <div className="px-4 py-8">
-        Hi, I'm Micah! I'm a full-stack engineer that has spent over 7 years
-        programming in Swift, JavaScript, TypeScript, and SQL, in multiple
-        different frameworks. I've made iOS apps, cross-platform apps with React
-        Native, and websites using pure React and, more recently, Next.js. I've
-        made RESTful APIs as well as GraphQL APIs, using Express.js as the
-        framework. I have designed PostgreSQL and MySQL databases. I'm extremely
-        self-motivated. I've usually worked as a solo developer, or as product
-        lead in a small engineering team, so I'm used to solving any problems
-        that arise. I also enjoy the process of diving into areas that I am
-        unfamiliar with. If you'd like to reach out, head over to the{" "}
+      <div className="px-4 py-8 text-xl">
+        Hello, my name is Micah. I am an accomplished Full Stack Software
+        Engineer with over seven years of experience, specializing in Swift,
+        JavaScript, TypeScript, and SQL, across various frameworks. My portfolio
+        includes the development of iOS applications, cross-platform
+        applications using React Native, as well as web applications utilizing
+        React and the more recent Next.js. I am proficient in creating both
+        RESTful and GraphQL APIs, often employing Express.js as the foundational
+        framework. My database design skills extend to PostgreSQL and MySQL
+        systems. With a strong propensity for self-motivation, I have
+        predominantly functioned as either an independent contributor or as a
+        product lead within compact engineering teams. This experience has
+        equipped me with the problem-solving skills essential for tackling a
+        diverse range of challenges. I relish the opportunity to delve into
+        unfamiliar domains to expand my knowledge base. To discuss potential
+        collaborations, please navigate to the{" "}
         {
           <Link
-            className="font-medium underline underline-offset-4"
+            className="font-semibold underline underline-offset-4"
             href="/contact"
           >
             Contact Page
           </Link>
         }{" "}
-        and send me a message. I look forward to hearing what we can build
-        together!
+        and send me a message. I am excited about the prospects of what we can
+        achieve together.
       </div>
     </main>
   );

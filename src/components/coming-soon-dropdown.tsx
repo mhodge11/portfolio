@@ -30,7 +30,7 @@ export function ComingSoonDropdown() {
         <div
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            "ml-2 cursor-pointer transition-colors hover:text-foreground/80",
+            "ml-2 cursor-pointer text-center transition-colors hover:text-foreground/80",
             comingSoonNav?.items.find((navItem) => pathname === navItem.href)
               ? "text-foreground"
               : "text-foreground/60",

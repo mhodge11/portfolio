@@ -76,7 +76,7 @@ export async function getDirections(
     const routeChunks = await Promise.all(promises);
     const route = generateRoute(routeChunks);
 
-    return {
+    const feature = {
       type: "Feature",
       properties: {},
       geometry: {
@@ -84,8 +84,11 @@ export async function getDirections(
         coordinates: route,
       },
     } as Feature<LineString>;
-  } catch (err) {
-    console.error(err);
-    throw new Error("Failed to get directions");
+
+    return { data: feature };
+  } catch (e) {
+    console.error("Error getting directions", e);
+    if (e instanceof Error) return { error: e.message };
+    return { error: "Error getting directions" };
   }
 }
