@@ -1,6 +1,6 @@
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 
-type IconProps = React.HTMLAttributes<SVGElement>;
+type IconProps = React.SVGAttributes<SVGElement>;
 type RadixIconProps = React.ComponentProps<typeof LinkedInLogoIcon>;
 
 export const Icons = {

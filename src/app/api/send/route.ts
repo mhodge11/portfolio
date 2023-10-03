@@ -6,7 +6,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(env.RESEND_KEY);
 
-export const POST = async (req: Request) => {
+export async function POST(req: Request) {
   try {
     const { name, email, message } = (await req.json()) as ContactSchema;
 
@@ -25,4 +25,4 @@ export const POST = async (req: Request) => {
       return NextResponse.json({ message: e.message }, { status: 500 });
     }
   }
-};
+}
