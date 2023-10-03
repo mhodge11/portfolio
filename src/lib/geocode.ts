@@ -1,16 +1,14 @@
-import { env } from "@/env.mjs";
-import { type FeatureCollection, type Point } from "@turf/turf";
+import { getMapboxAccessToken } from "@/lib/utils";
+import { type Feature, type FeatureCollection, type Point } from "@turf/turf";
 
 const baseUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places";
-
-function getAccessToken(isServerSide?: boolean) {
-  return isServerSide ? env.SERVER_MAPBOX_TOKEN : env.NEXT_PUBLIC_MAPBOX_TOKEN;
-}
 
 function getRequestUrl(searchText: string, isServerSide?: boolean) {
   return `${baseUrl}/${encodeURIComponent(
     searchText,
-  )}.json?country=US&limit=1&access_token=${getAccessToken(isServerSide)}`;
+  )}.json?country=US&limit=1&access_token=${getMapboxAccessToken(
+    isServerSide,
+  )}`;
 }
 
 export async function geocode(searchText: string, isServerSide?: boolean) {
@@ -23,7 +21,7 @@ export async function geocode(searchText: string, isServerSide?: boolean) {
 
     if (!feature) throw new Error(`Address "${searchText}" not found`);
 
-    return { data: feature.geometry as Point };
+    return { data: feature as Feature<Point> };
   } catch (e) {
     console.error("Error geocoding", e);
     if (e instanceof Error) return { error: e.message };

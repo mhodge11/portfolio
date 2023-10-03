@@ -1,15 +1,12 @@
-import { env } from "@/env.mjs";
 import { decode } from "@/lib/polyline";
+import { getMapboxAccessToken } from "@/lib/utils";
 import { type Feature, type LineString, type Position } from "@turf/turf";
 
 const baseUrl = "https://api.mapbox.com/directions/v5/mapbox/driving";
 
-function getAccessToken(isServerSide?: boolean) {
-  return isServerSide ? env.SERVER_MAPBOX_TOKEN : env.NEXT_PUBLIC_MAPBOX_TOKEN;
-}
-
-function getRequestUrl(path: string, isServerSide?: boolean) {
-  return `${baseUrl}/${path}?geometries=polyline&overview=full&access_token=${getAccessToken(
+function getRequestUrl(coordinates: Position[], isServerSide?: boolean) {
+  const path = coordinates.map((coordinate) => coordinate.join(",")).join(";");
+  return `${baseUrl}/${path}?geometries=polyline&overview=full&access_token=${getMapboxAccessToken(
     isServerSide,
   )}`;
 }
@@ -48,8 +45,7 @@ async function getRouteChunk(
   index: number,
   isServerSide?: boolean,
 ) {
-  const coordinates = chunk.map((pin) => pin.join(",")).join(";");
-  const url = getRequestUrl(coordinates, isServerSide);
+  const url = getRequestUrl(chunk, isServerSide);
 
   const query = await fetch(url, { method: "GET" });
 
@@ -70,10 +66,6 @@ async function getRouteChunk(
 
 export async function getDirections(
   coordinates: Position[],
-  {
-    id,
-    properties,
-  }: { id?: string; properties?: Record<string, unknown> } = {},
   isServerSide = false,
 ) {
   try {
@@ -85,9 +77,8 @@ export async function getDirections(
     const route = generateRoute(routeChunks);
 
     return {
-      id,
       type: "Feature",
-      properties: { ...properties, id },
+      properties: {},
       geometry: {
         type: "LineString",
         coordinates: route,
