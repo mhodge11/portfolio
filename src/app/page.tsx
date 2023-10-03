@@ -14,7 +14,7 @@ export default function IndexPage() {
   return (
     <main className="container relative">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Full-Stack Software Engineer.</PageHeaderHeading>
+        <PageHeaderHeading>Full Stack Software Engineer.</PageHeaderHeading>
         <PageHeaderDescription>
           TypeScript, JavaScript, React, React Native, Next.js, Tailwind CSS,
           HTML, CSS, iOS, Swift, Express.js, Node.js, AWS, GraphQL, SQL and
