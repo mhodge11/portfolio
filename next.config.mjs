@@ -7,7 +7,6 @@ const __dirname = dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const config = {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call
   generateBuildId: () => nextBuildId({ dir: __dirname }),
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
