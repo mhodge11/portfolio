@@ -3,7 +3,7 @@ import { absoluteUrl, baseUrl } from "@/lib/utils";
 export const siteConfig = {
   name: "micahhodge/software",
   url: baseUrl(),
-  ogImage: absoluteUrl("og.png"),
+  ogImage: absoluteUrl("og"),
   description: "Full-stack software engineer",
   links: {
     x: "https://twitter.com/micah__hodge",
