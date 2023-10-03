@@ -18,7 +18,7 @@ export default function ResumePage() {
       <PageHeader className="pb-8">
         <PageHeaderHeading>Resume.</PageHeaderHeading>
         <PageHeaderDescription>
-          Work experience, skills, and past education.
+          Work experience, past education, and skills.
         </PageHeaderDescription>
       </PageHeader>
       <Separator />
