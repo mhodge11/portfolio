@@ -12,11 +12,7 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
-          <Link
-            href={siteConfig.links.x}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href={siteConfig.links.x} target="_blank" rel="noreferrer">
             <Tooltip>
               <TooltipTrigger>
                 <div className="font-medium underline underline-offset-4">
