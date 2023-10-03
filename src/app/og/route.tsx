@@ -1,18 +1,9 @@
-import { type NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
 
-interface Fonts {
-  fontSans: NextFontWithVariable;
-}
-
-export async function GET() {
+export function GET() {
   try {
-    const { fontSans } = await fetch(
-      new URL("../../lib/fonts.ts", import.meta.url),
-    ).then((res) => res.json() as Promise<Fonts>);
-
     return new ImageResponse(
       (
         <div
@@ -86,10 +77,11 @@ export async function GET() {
           </div>
           <div
             style={{
-              ...fontSans.style,
+              fontFamily: "Inter",
               fontWeight: 700,
               fontStyle: "normal",
               fontSize: 60,
+              fontSmooth: "always",
               letterSpacing: "-0.025em",
               color: "#040c14",
               marginTop: 30,

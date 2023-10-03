@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "micahhodge/software",
   url: baseUrl(),
   ogImage: absoluteUrl("og"),
-  description: "Full-stack software engineer",
+  description: "Full Stack Software Engineer",
   links: {
     x: "https://twitter.com/micah__hodge",
     github: "https://github.com/mhodge11",
