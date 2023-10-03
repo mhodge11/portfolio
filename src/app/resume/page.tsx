@@ -123,7 +123,7 @@ export default function ResumePage() {
         endDate="April 2020"
       >
         <ul className="ml-4 list-disc">
-          <li>Light TRVLER (2017)</li>
+          <li>Light TRVLR (2017)</li>
           <ul className="ml-4 list-disc">
             <li>Game similar to flappy bird.</li>
             <li>Used google adsense to generate revenue.</li>
