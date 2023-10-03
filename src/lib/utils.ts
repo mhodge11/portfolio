@@ -1,3 +1,4 @@
+import { env } from "@/env.mjs";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -23,4 +24,8 @@ export function baseUrl() {
 
 export function absoluteUrl(path: string) {
   return `${baseUrl()}/${path}`;
+}
+
+export function getMapboxAccessToken(isServerSide?: boolean) {
+  return isServerSide ? env.SERVER_MAPBOX_TOKEN : env.NEXT_PUBLIC_MAPBOX_TOKEN;
 }
