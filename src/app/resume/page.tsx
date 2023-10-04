@@ -24,15 +24,25 @@ export default function ResumePage() {
       <Separator />
       <ResumeTitleSection>Summary</ResumeTitleSection>
       <ResumeSummarySection>
-        Results-driven Full Stack Software Engineer with a strong background in
-        mathematics and music. Specialized in designing and implementing
-        scalable solutions using serverless architecture, geolocation services,
-        and mapping tools. Proficient in complex systems engineering and data
-        modeling. Collaborated on the development of 16 applications across
-        mobile platforms, websites, SaaS products, and video games, alongside my
-        sibling, Daniel. Contributed to a research paper that has been utilized
-        by Oak Ridge National Laboratory for advancements in e-learning through
-        user interface and user experience analysis.
+        <p>
+          Results-driven Full Stack Software Engineer with a strong background
+          in mathematics and music.
+        </p>
+        <p>
+          Specialized in designing and implementing scalable solutions using
+          serverless architecture, geolocation services, and mapping tools.
+        </p>
+        <p>
+          Proficient in complex systems engineering and data modeling.
+          Collaborated on the development of 16 applications across mobile
+          platforms, websites, SaaS products, and video games, alongside my
+          sibling, Daniel.
+        </p>
+        <p>
+          Contributed to a research paper that has been utilized by Oak Ridge
+          National Laboratory for advancements in e-learning through user
+          interface and user experience analysis.
+        </p>
       </ResumeSummarySection>
       <Separator />
       <ResumeTitleSection>Experience</ResumeTitleSection>
