@@ -2,7 +2,7 @@
 
 ## Bio
 
-### Hello, my name is Micah
+**Hello, my name is Micah.**
 
 I am an accomplished Full Stack Software Engineer with over seven years of experience, specializing in Swift, JavaScript, TypeScript, GraphQL, and SQL, across various frameworks.
 
