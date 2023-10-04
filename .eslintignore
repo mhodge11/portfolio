@@ -2,4 +2,4 @@ tailwind.config.ts
 .github
 .next
 node_modules
-.env
+.env.local
